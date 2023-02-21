@@ -5,10 +5,17 @@ fetch('https://api.datos.gob.mx/v2/Records')
 .catch(err => console.log('error' , err))
 
 const mostrardata = (data) =>{
-    results = data.results
-    results = data.pagination
     console.log(data);
-    console.log(data.results[0].compiledRelease.ciclo);
+    console.log(data.results)
+    let datos = data.results
+    let body = ''
+    for(let i = 0; i < datos.length; i++){
+        body += `<tr><td>${datos[i]._id}</td><td>${datos[i].compiledRelease.ciclo}</td><td>${datos[0].compiledRelease.publisher.name}</td><td>${datos[0].compiledRelease.publisher.uri}</td></tr>`
+
+    }
+
+    document.getElementById('data').innerHTML = body
+
 
 
 }

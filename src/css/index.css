@@ -1,9 +1,18 @@
-.imgprincipal{
-    width: 200px;
-
-
+.imgprin{
+    width: 350px;
+    border-radius: 30%;
 }
 
-.header{
-    background-color: blanchedalmond;
+.imgsec{
+    width: 100px;
+}
+.body{
+    background-color: blue;
+    color: cyan;
+
+}
+.table thead{
+    background-color: black;
+    color: white;
+
 }
